@@ -36,10 +36,7 @@ global.$ = {
 //     .pipe(deploy())
 // });
 var ghpages = require('gh-pages');
-ghpages.publish('dist', {
-    branch: 'master',
-    repo: 'https://github.com/Uzcoin404/Dasarent.git'
-}, callback);
+ghpages.publish('dist', function(err) {});
 
 $.path.tasks.forEach(task=>require(`${__dirname}/tasks/${task}`)())
 
