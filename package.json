@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uzcoin404/Dasarent.git"
+  },
   "homepage": "https://uzcoin404.github.io/Dasarent/",
   "author": "vladimir",
   "license": "ISC",

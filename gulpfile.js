@@ -28,13 +28,13 @@ global.$ = {
         }
     }
 }
-// var gulp        = require('gulp');
-// var deploy      = require('gulp-gh-pages');
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
 
-// gulp.task('deploy', function () {
-//   return gulp.src("./dist/**/*")
-//     .pipe(deploy())
-// });
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 var ghpages = require('gh-pages');
 ghpages.publish('dist', function(err) {});
 
