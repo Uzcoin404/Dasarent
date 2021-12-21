@@ -1,0 +1,10 @@
+module.exports = ()=> $.g.task('sass', ()=>
+    $.g.src($.path.src.sass)
+    .pipe($.gp.sass())
+    .pipe($.gp.autoprefixer())
+    .pipe($.gp.groupCssMediaQueries())
+    .pipe($.gp.sass({outputStyle: 'compressed'}))
+    .pipe($.gp.rename('style.min.css'))
+    .pipe($.g.dest($.path.dist.sass))
+    .on('end', $.bs.reload)
+)

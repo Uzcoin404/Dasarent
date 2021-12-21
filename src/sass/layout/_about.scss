@@ -1,0 +1,72 @@
+.about {
+
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  &__content {
+    background: url(../images/about.png) no-repeat center/cover;
+    background-color: white;
+    padding: 80px 0;
+
+    p {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      /* or 150% */
+
+      text-align: center;
+      letter-spacing: 0.05em;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+  }
+
+  &__statistic {
+    padding: 130px 0;
+    background: url(../images/Факты.jpg) no-repeat center/cover;
+
+    &-wrap {
+      @include row();
+    }
+
+    &-item {
+      @include media($md) {
+        @include col(6);
+      }
+
+      @include col(3);
+
+      h5 {
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 61px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $text2;
+
+        @include media($md) {
+          font-size: 25px;
+
+        }
+      }
+
+      p {
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $color1;
+        @include media($md) {
+          font-size: 15px;
+
+        }
+      }
+    }
+  }
+}

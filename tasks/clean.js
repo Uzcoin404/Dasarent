@@ -1,0 +1,1 @@
+module.exports = () => $.g.task('clean',()=> $.g.src(['./dist/**/*.*', '!./dist/static/**/*.*']).pipe($.gp.clean()))
