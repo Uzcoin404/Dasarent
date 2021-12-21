@@ -28,13 +28,18 @@ global.$ = {
         }
     }
 }
-var gulp        = require('gulp');
-var deploy      = require('gulp-gh-pages');
+// var gulp        = require('gulp');
+// var deploy      = require('gulp-gh-pages');
 
-gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
+// gulp.task('deploy', function () {
+//   return gulp.src("./dist/**/*")
+//     .pipe(deploy())
+// });
+var ghpages = require('gh-pages');
+ghpages.publish('dist', {
+    branch: 'master',
+    repo: 'https://github.com/Uzcoin404/Dasarent.git'
+}, callback);
 
 $.path.tasks.forEach(task=>require(`${__dirname}/tasks/${task}`)())
 
