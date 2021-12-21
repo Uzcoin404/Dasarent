@@ -28,6 +28,9 @@ global.$ = {
         }
     }
 }
+var ghpages = require('gh-pages');
+ghpages.publish('dist', function(err) {});
+
 $.path.tasks.forEach(task=>require(`${__dirname}/tasks/${task}`)())
 
 exports.default = $.g.series('clean', $.g.parallel('html', 'sass', 'js','fonts', 'server', 'watch','images'))
